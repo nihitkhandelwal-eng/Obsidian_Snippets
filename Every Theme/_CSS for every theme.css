@@ -1,0 +1,573 @@
+/*----------------------------------------------------------------
+BIGGER POPOVERS
+----------------------------------------------------------------*/
+
+div.popover.hover-popover {
+    border-radius: 10px;
+    transform: ease-in;
+    transition: ease-out;
+    width: 40rem;
+    background-color: var(--background-primary);
+    border: 2px solid var(--background-modifier-border) !important;
+    max-height: 100%; /*used to be: max-height: 100%  or min-height: auto*/
+  }
+  
+  div.popover.hover-popover .markdown-preview-view {
+    font-size: 16px !important;
+    padding-bottom: 2.5rem;
+    padding-top: 1rem;
+  }
+  
+  div.popover.hover-popover .markdown-embed-content .markdown-preview-section {
+    /*preview margin padding*/
+    padding: 0rem;
+  }
+  
+  .popover.hover-popover .markdown-embed {
+    height: 25rem;
+  }
+  
+  .markdown-embed iframe{
+      height: 325px;
+  }
+  
+  .popover.hover-popover .markdown-embed img{
+      max-width: 100%;
+      max-height: auto;
+      margin: 0em;
+  }
+
+
+  /*---------------------------------------------------------------------
+------------------- Make subtler folding gutter arrows ----------------
+-----------------------------------------------------------------------*/
+
+.CodeMirror-foldgutter-folded:after, .CodeMirror-foldgutter-open:after {
+    opacity: 0.5;
+    font-size: 60%;
+  }
+  
+  .CodeMirror-foldgutter-folded:hover:after, .CodeMirror-foldgutter-open:hover:after {
+    opacity: 1;
+  }
+  
+  .CodeMirror-foldgutter-folded:after {
+    content: "\25BA";    
+  }
+  
+  .CodeMirror-foldgutter-open:after {
+    content: "\25BC";    
+  }
+
+
+/*---------------------------------------------------------
+--------------- Realistic Highlights ----------------------
+-----------------------------------------------------------*/
+
+body{
+    --fluro-yellow-rgb: 255, 255, 0;
+    --fluro-pink-rgb: 255, 0, 255;
+    --fluro-blue-rgb: 0, 255, 255;
+    --fluro-green-rgb: 0, 255, 0;
+    --text-highlight-rgb: var(--fluro-yellow-rgb);
+  }
+  
+  mark.yellow{ --text-highlight-rgb: var(--fluro-yellow-rgb); }
+  mark.pink{ --text-highlight-rgb: var(--fluro-pink-rgb); }
+  mark.blue{ --text-highlight-rgb: var(--fluro-blue-rgb); }
+  mark.green{ --text-highlight-rgb: var(--fluro-green-rgb); }
+  
+  .markdown-preview-view mark {
+    margin: 0 -0.4em;
+    padding: 0.1em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(105deg,
+      transparent 0,
+      transparent 0.3em,
+      rgba(var(--text-highlight-rgb), 0.7) 0.5em,
+      rgba(var(--text-highlight-rgb), 0.4) 1.6em,
+      rgba(var(--text-highlight-rgb), 0.4) calc(100% - 1.4em),
+      rgba(var(--text-highlight-rgb), 0.7) calc(100% - 0.5em),
+      transparent calc(100% - 0.3em),
+      transparent 100%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: 0 0 0.75em var(--background-primary-alt);
+  }
+  
+  .cm-s-obsidian span.cm-highlight {
+    padding:0.1em 0;
+    background: rgba(var(--text-highlight-rgb), 0.4);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    text-shadow: 0 0 0.75em var(--background-primary-alt);
+  }
+  
+  .cm-s-obsidian span.cm-formatting-highlight{
+    margin: 0 0 0 -0.4em;
+    padding: 0.1em 0 0.1em 0.4em;
+    border-radius: 0.8em 0 0 0.4em;
+    background: none;
+    background-image: linear-gradient(105deg,
+      transparent 0,
+      transparent 0.3em,
+      rgba(var(--text-highlight-rgb), 0.7) 0.5em,
+      rgba(var(--text-highlight-rgb), 0.4) 1.6em);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .cm-s-obsidian .cm-highlight+span.cm-formatting-highlight {
+    margin: 0 -0.4em 0 0;
+    padding: 0.1em 0.4em 0.1em 0;
+    border-radius: 0 0.4em 0.8em 0;
+    background: none;
+    background-image: linear-gradient(105deg,
+      rgba(var(--text-highlight-rgb), 0.4) calc(100% - 1.4em),
+      rgba(var(--text-highlight-rgb), 0.7) calc(100% - 0.5em),
+      transparent calc(100% - 0.3em),
+      transparent 100%);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+
+/*---------------------------------------------------------
+---------------- Image Improvements -----------------------
+----------------------------------------------------------*/
+
+img
+{
+  margin-left: auto;
+  margin-right:auto;
+  display: block;
+}
+
+
+.markdown-preview-view img {
+  max-width: 100%;
+  outline: none;
+  -webkit-filter: drop-shadow(10px 10px 10px rgba(8, 8, 8, 0.5));
+      background-clip: content-box,padding-box;
+      border-radius: 20px 20px 20px;
+}
+
+
+/*--------------------------------------------------------------------------------------
+-------------------------- bigger link popup preview  ----------------------------------
+----------------------------------------------------------------------------------------*/
+
+.popover.hover-popover {
+    position: absolute;
+    z-index: var(--layer-popover);
+    transform: scale(0.9); /* makes the content smaller */
+    max-height: 800px;    /* was 300 */
+    min-height: 100px;
+    width: 500px; /* was 400 */
+    overflow: hidden;      
+    padding: 0;
+    border-bottom: none;
+  }
+/* I'm not sure what this does, got popove code from Obsdn-Dark-Rmx */
+/*
+  .popover {
+    background-color: var(--background-primary);
+    border: 1px solid var(--background-primary-alt);
+    box-shadow: 3px 3px 7px var(--background-modifier-box-shadow);
+    border-radius: 6px;
+    padding: 15px 20px 10px 20px;
+    position: relative;
+}
+
+/* remove-tweak the bottom gradient on the popup: remove the gradient or set height to 0 */
+    .popover.hover-popover:after {
+      height: 0px;    
+      background: linear-gradient(to bottom, transparent, var(--background-primary) 80%, var(--background-primary));
+  }
+
+/* Colour for pop-up text in ⌘+O */
+.suggestion-item.is-selected {
+  background-color: #2f3136; /* PB changed from var(--text-accent) */
+  color: whitesmoke;
+}
+
+
+/*---------------------------------------------------------
+------------------- smaller scrollbars --------------------
+-----------------------------------------------------------*/
+
+.CodeMirror-vscrollbar, .CodeMirror-hscrollbar, ::-webkit-scrollbar {
+    width: 3px;
+    height: 3px;
+  }
+
+  
+
+/*-----------------------------------------------------------------------------------------
+------- make the plug-ins window bigger and more compact - courtesy: pseudometa -----------
+-------------------------------------------------------------------------------------------*/
+
+
+.modal.mod-community-plugin {
+    height: 93%;
+    max-width: unset;
+    width: 96%;
+}
+.community-plugin-item {
+    padding-top: 0.1em;
+    padding-left: 0.9em;
+    padding-right: 0.3em;
+    padding-bottom: 0.1em;
+    line-height: 1.2em;
+    margin-top: 0.1em;
+}
+.community-plugin-search-summary.u-muted{
+    font-weight: 600;
+    padding-left: 0.9em;
+}
+.community-plugin-author,
+.community-plugin-desc,
+.community-plugin-version {
+    font-size: 0.85em !important;
+    line-height: 1.3em;
+    color: var(--text-muted);
+}
+.community-plugin-author,
+.community-plugin-version{
+    font-style: italic;
+}
+.community-plugin-name {
+    line-height: 1.2em;
+    font-size: 0.9em;
+    font-weight: 500;
+}
+.flair.mod-pop {
+    top: 4px;
+}
+.install{
+    display:none;
+}
+.community-plugin-downloads::before,
+.community-plugin-downloads-text {
+    content: "↓";
+    font-size: 0.9em;
+    color: var(--text-muted);
+}
+
+
+/*--------------------------------------------------------------------
+------------------ Sticky Notes Everywhere ---------------------------
+---------------------------------------------------------------------*/
+
+.stickies {
+    text-align: center;
+    transition: width 2s;
+    padding: 5px;
+    margin: 10px;
+    position: relative;
+    float: right;
+    right: -30px;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    width: 40%;
+    background: hotpink;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(2deg);
+    transition: all 2s ease;
+    z-index: 1;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 0px;
+    color: black;
+  }
+  
+  .stickies::after {
+    content: "";
+    left: -1%;
+    top: -10px;
+    background: ffff00;
+    height: 40px;
+    width: 15px;
+    border-radius: 10px;
+    border: 3px solid black;
+    display: inline-block;
+    position: absolute;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(-11deg);
+    z-index: 11;
+  }
+  
+  .stickies::before {
+    width: 11px;
+    height: 20px;
+    content: "";
+    background: ffff00;
+    display: inline-block;
+    position: absolute;
+    left: -1.3%;
+    top: -2px;
+    border-radius: 10px;
+    border: 3px solid black;
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+    z-index: 10;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(-11deg);
+  }
+  
+  .stickies2 {
+    position: relative;
+    float: left;
+    box-shadow: 0 10px 10px 2px rgba(0, 0, 0, 0.3);
+    width: 30%;
+    background: #edec92;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    transform: rotate(-2deg);
+    transition: all 2s ease;
+    z-index: 1;
+    padding: 20px;
+    margin: 10px;
+    color: black;
+  }
+  
+  .stickies2::after {
+    content: "";
+    display: block;
+    height: 32px;
+    width: 2px;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    z-index: 1;
+    border-radius: 50%;
+    display: inline-block;
+    height: 15px;
+    width: 15px;
+    border: 1px;
+    box-shadow: inset -10px -10px 10px #f0b7a4, inset 3px 3px 5px;
+  }
+
+  
+/*---------------------------------------------------------
+-------------------- Sticky Notes -------------------------
+-----------------------------------------------------------*/ 
+
+.sticky {
+    background-color:var(--yellow);
+    padding:10px;
+    width:300px;
+    height:200px;
+    color:black;
+    margin-left:150px;
+    font-family: chalkboard;
+    box-shadow: 10px 10px 7px rgb(0,0,0,0.5);
+    transform:rotate(3deg);
+    transition: transform .15s linear;
+  }
+  .sticky:hover {
+    transform:scale(1.1);
+  }
+
+
+/*-------------------------------------------------------------------------------------
+-------------------- Translucent modals - from: Nosedive-Obsidian ---------------------
+---------------------------------------------------------------------------------------*/
+
+/* Modify modal, omnibar, open looks */
+input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
+    border-radius: 3px;
+    border: 2px solid rgba(38, 38, 59, 0.5); /* in the original code this is var(--text-muted) */
+    background-color: transparent;
+    box-sizing: border-box;
+    border-collapse: collapse;
+  }
+  
+  .modal-bg {
+    background-color: #FFFFFF01;
+    backdrop-filter: blur(20px);
+  }
+  
+  /* Make legible background for menus since we overrode the background */
+  div.popover.hover-popover, .menu, .suggestion-container {
+    background-color: #FFFFFF01;
+    backdrop-filter: blur(30px);
+    border: none;
+  }
+
+  
+
+/*-------------------------------------------------------------------
+---------------- Vault launch progress bar change color -------------
+---------------------------------------------------------------------*/
+
+.progress-bar-subline {
+    position: absolute;
+    background-color: var(--base2);
+    height: 8px;
+  }
+  
+  .progress-bar-line {
+    position: absolute;
+    opacity: 0.4;
+    background-color: var(--base2);
+    width: 150%;
+    height: 8px;
+  }
+
+
+
+/*--------------------------------------------------------------------
+------------------------ star calendar date --------------------------
+----------------------------------------------------------------------*/
+
+#calendar-container [data-tags~="journal/starred"]::after {
+  content: url('data:image/svg+xml; utf8, <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 55.867 55.867" style="enable-background:new 0 0 55.867 55.867;" xml:space="preserve"> <path d="M55.818,21.578c-0.118-0.362-0.431-0.626-0.808-0.681L36.92,18.268L28.83,1.876c-0.168-0.342-0.516-0.558-0.896-0.558 s-0.729,0.216-0.896,0.558l-8.091,16.393l-18.09,2.629c-0.377,0.055-0.689,0.318-0.808,0.681c-0.117,0.361-0.02,0.759,0.253,1.024 l13.091,12.76l-3.091,18.018c-0.064,0.375,0.09,0.754,0.397,0.978c0.309,0.226,0.718,0.255,1.053,0.076l16.182-8.506l16.18,8.506 c0.146,0.077,0.307,0.115,0.466,0.115c0.207,0,0.413-0.064,0.588-0.191c0.308-0.224,0.462-0.603,0.397-0.978l-3.09-18.017 l13.091-12.761C55.838,22.336,55.936,21.939,55.818,21.578z" fill="yellow" stroke="white"/></svg>');
+  position: absolute;
+  top: -4px;
+  right: 4px;
+  height: 8px;
+  width: 8px;
+}
+
+/* flag calendar date */
+#calendar-container [data-tags~="journal/flagged"] {
+  color: var(--text-error); /* Make the text red */
+}
+
+
+/*--------------------------------------------------------------------------
+------------------------------- Notation checkboxes ------------------------
+----------------------------------------------------------------------------*/
+
+.markdown-preview-view .task-list-item-checkbox {
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  border: 1px solid var(--text-normal);
+  position: relative;
+  width: 16px;
+  height: 16px;
+  margin: 0;
+  margin-right: 4px;
+  margin-bottom: 2px;
+  transition: background-color 200ms ease-out 0s;
+  cursor: pointer;
+  filter: none;
+  border-radius: 4px;
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked {
+  border: none;
+  background-color: var(--interactive-accent);
+}
+
+.markdown-preview-view .task-list-item-checkbox:hover {
+  background-color: var(--background-primary-alt);
+}
+
+.markdown-preview-view .task-list-item-checkbox:checked::before {
+  position: absolute;
+  color: white;
+  text-align: center;
+  font-weight: 900;
+  line-height: 15px;
+  width:12px;
+  left:2px;
+  right:2px;
+}
+
+.markdown-preview-view ul>li.task-list-item {
+  font-weight: normal;
+  color: var(--text-normal);
+}
+
+/* SVG check mark for done ('- [x]') */
+.markdown-preview-view li[data-task="x"]>.task-list-item-checkbox:checked::before,
+.markdown-preview-view li[data-task="X"]>.task-list-item-checkbox:checked::before {
+  content: ' ';
+  top: 2px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 14 14'%3E%3Cpolygon points='5.5 11.9993304 14 3.49933039 12.5 2 5.5 8.99933039 1.5 4.9968652 0 6.49933039'%3E%3C/polygon%3E%3C/svg%3E");
+}
+
+/* SVG chevron right for deferred/scheduled ('- [>]') */
+.markdown-preview-view li[data-task=">"]>.task-list-item-checkbox:checked::before {
+  content: '';
+  top:2px;
+  bottom:2px;
+  background-color: white;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.12 7L3.26667 11.76L4.57333 13.0667L10.7333 7L4.57333 0.933332L3.26667 2.24L8.12 7Z'/%3E%3C/svg%3E");
+}
+
+/* SVG line for cancelled/non-task ('- [-]') */
+.markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked::before {
+  content: '';
+  top:2px;
+  bottom:2px;
+  background-color: white;
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 14 14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.5' y='6.5' width='13' height='1'/%3E%3C/svg%3E");
+}
+/* greyed-out background colour for cancelled/non-task ('- [-]') */
+.markdown-preview-view li[data-task="-"]>.task-list-item-checkbox:checked {
+  background-color: var(--text-faint);
+}
+
+/* '?' for question/more info task ('- [?]') */
+.markdown-preview-view li[data-task="?"]>.task-list-item-checkbox:checked::before {
+  content: '?';
+}
+/* text style for question/more info task ('- [?]') */
+.markdown-preview-view ul>li[data-task="?"].task-list-item.is-checked {
+  color: var(--text-normal);
+  text-decoration: none;
+}
+/* yellow background colour for question/more info task ('- [?]') */
+.markdown-preview-view li[data-task="?"]>.task-list-item-checkbox:checked{
+  background-color: #A99400;
+}
+
+/* '!' for important task ('- [!]') */
+.markdown-preview-view li[data-task="!"]>.task-list-item-checkbox:checked::before {
+  content: '!';
+}
+/* text style for important task ('- [!]') */
+.markdown-preview-view ul>li[data-task="!"].task-list-item.is-checked {
+  color: var(--text-normal);
+  text-decoration: none;
+  font-weight: 900;
+}
+/* red background colour for important task ('- [!]') */
+.markdown-preview-view li[data-task="!"]>.task-list-item-checkbox:checked {
+  background-color: #a90000;
+}
+
+
+/*-----------------------------------------------------------------------------------------
+----------------------- Command palette: change font color of hotkeys ---------------------
+-------------------------------------------------------------------------------------------*/
+
+.suggestion-item.is-selected .suggestion-hotkey{
+  color: yellow
+}
+
+
+/*-----------------------------------------------------------
+----------- auto fades status bar items ---------------------
+-------------------------------------------------------------*/
+
+.status-bar:not(:hover) .status-bar-item {
+  opacity: 0.25;
+  transition: opacity 0.25s ease-in-out;
+}
