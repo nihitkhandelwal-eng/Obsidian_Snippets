@@ -53,7 +53,7 @@
 .markdown-preview-view h3 {
   font-family: var(--header-font);
   font-variant:caps;
-  text-transform:uppercase;
+  text-transform:capitalize;
   letter-spacing:0.005em;
   font-weight:550 !important;
   font-size:1.8em !important;
@@ -97,35 +97,29 @@
 .cm-header-1,
 .markdown-preview-section h1{
     font-size: 34px;
-    font-family: var(--header-font);
 }
 
 .cm-header-2,
 .markdown-preview-section h2{
     font-size: 30px;
-    font-family: var(--header-font);
 }
 
 .cm-header-3,
 .markdown-preview-section h3{
     font-size: 27px;
-    font-family: var(--header-font);
 }
 
 .cm-header-4,
 .markdown-preview-section h4{
     font-size: 24px;
-    font-family: var(--header-font);
 }
 
 .cm-header-5,
 .markdown-preview-section h5{
     font-size: 21px;
-    font-family: var(--header-font);
 }
 
 .cm-header-6,
 .markdown-preview-section h6{
     font-size: 17.5p;
-    font-family: var(--header-font);
 }
