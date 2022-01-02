@@ -3,3 +3,7 @@
 */.Archive/*
 .Archive/
 .Archive/**
+\.archive/*
+*/.archive/*
+.archive/
+.archive/**
