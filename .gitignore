@@ -1,9 +1,2 @@
 # Ignore files in this folder
-\.Archive/*
-*/.Archive/*
-.Archive/
-.Archive/**
-\.archive/*
-*/.archive/*
-.archive/
-.archive/**
+.archive/*
