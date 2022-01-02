@@ -1,0 +1,5 @@
+# Ignore files in this folder
+\.Archive/*
+*/.Archive/*
+.Archive/
+.Archive/**
