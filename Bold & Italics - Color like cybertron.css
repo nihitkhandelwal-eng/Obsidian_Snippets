@@ -4,7 +4,7 @@
 
 
 strong {
-  color: red; /* default #9e8aff */
+  color: #9e8aff; /* default #9e8aff */
   font-weight: 700; /*previous bold purple: b399fff2 ; alt: red cf6f6f ; alt: yellow bdba2d*/
 }
 
