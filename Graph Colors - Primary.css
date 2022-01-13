@@ -133,7 +133,7 @@
     --graph-fill-attachment: var(--purple); 
     --graph-circle-fill: var(--steelblue); /* cornflower blue for suble */
     --graph-circle-fill-highlight: var(--navy);
-    --graph-circle-fill-unresolved: var(--linen2);
+    --graph-circle-fill-unresolved: var(--linen3);
     --graph-fill-tag: var(--hotpink); /* for subtle use teal */
     --graph-arrow: var(--skyblue);
 }
