@@ -191,6 +191,12 @@ GRAPH CUSTOMIZATION
 }
 
 
+.graph-view.color-fill-focused {
+  color:var(--red);
+  opacity: 100%;
+}
+
+
 /* The part above this is very clean & simple, all are different shades of blue
 So, blue is something I won't be touching much in the group settings of the graph */
 
@@ -203,7 +209,7 @@ tag:#status/💡opinion ==== #ff6347
 path:"🌱 Journal/Daily Notes" ==== #FFFF00
 path:"🌴 Academia/Subjects" ====
 path:"🌴 Academia/Modules" ====
-path:"🌴 Academia" ====
+path:"🌴 Academia" ==== #FA8072
 
 
 
