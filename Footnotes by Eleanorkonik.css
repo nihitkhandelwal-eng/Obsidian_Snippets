@@ -9,5 +9,6 @@
 .markdown-preview-view .footnotes::before {
   content: "Endnotes";
   font-family: "Caveat Brush"; 
-  font-size:2.5em;
+  font-size:1.8em;
+  color: rgb(114, 111, 111);
 }

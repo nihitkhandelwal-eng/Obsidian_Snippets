@@ -392,7 +392,7 @@ input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
 
 /* flag calendar date */
 #calendar-container [data-tags~="feelings/happy"] {
-  color: blue; /* Make the text red */
+  color: blue; /* Make the text blue */
 }
 
 #calendar-container [data-tags~="feelings/surprised"] {
@@ -414,7 +414,7 @@ input.prompt-input, input.prompt-input:active, input.prompt-input:focus {
 
 /*-----------------------------------------------------------------------------------------
 ----------------------- Command palette: change font color of hotkeys ---------------------
--------------------------------------------------------------------------------------------*/
+------------------------------------------------------------------------------------------- */
 
 .suggestion-item.is-selected .suggestion-hotkey{
   color: yellow
