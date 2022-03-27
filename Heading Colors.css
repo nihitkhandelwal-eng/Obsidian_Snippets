@@ -24,13 +24,13 @@
 .markdown-preview-view h4,
 .cm-header-4
 {
-  color: #cf9bf1; /* default color was #67c073 */
+  color: #eeb958; /* default color was #67c073 */
 }
 
 .markdown-preview-view h5,
 .cm-header-5
 {
-  color: #eeb958; /* default color was #de87ca */
+  color: #cf9bf1; /* default color was #de87ca */
 }
 
 .markdown-preview-view h6,

@@ -109,9 +109,9 @@ h1,
 }
 .markdown-preview-view h6,
 .cm-s-obsidian .cm-header-6 {
-  font-variant:normal;
+  font-variant:uppercase;
   letter-spacing:0.01em;
-  font-size:1.2em;
+  font-size:1.05em;
   color:var(--h6-color);
   font-weight:450;
   color: #8d9291;
