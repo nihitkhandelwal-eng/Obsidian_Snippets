@@ -91,13 +91,11 @@ cssclass: tableClass1, hackClass2, userClass3, etc
     
 
 
-
-
-
-
-
-
-
+/* Use the css class t-c */
+.t-c table {
+    margin-left: auto;
+    margin-right: auto
+}
 
 
 
