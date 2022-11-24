@@ -1,0 +1,35 @@
+/*------------- ITS --------------*/
+
+/*CSS class, Hide Frontmatter*/
+.no-m .frontmatter-container,
+.reveal pre.frontmatter {
+    display: none;
+}
+
+
+/*Center*/
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/*Poems*/
+.poem p {
+    text-align: center;
+    line-height: 1.3em;
+    margin-block-end: 4%;
+}
+
+
+/*--chbx-Recall--*/
+.recall { 
+    text-decoration: unset;
+    color: transparent;
+    text-shadow: 0 0 10px var(--text-normal);
+}
+.recall:hover {
+    color: var(--text-normal);
+    text-shadow: 0 0 0px var(--text-normal);
+}

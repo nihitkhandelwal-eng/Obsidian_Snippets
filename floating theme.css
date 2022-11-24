@@ -58,7 +58,7 @@ body:not(.is-mobile) .view-header {opacity: 0; transition: opacity 0.5s 3s ease-
 
 /* == floating window == */
 body:not(.is-mobile) {
-	background: url('https://i.imgur.com/xKIOFc8.png'); 
+	background: url('https://i.imgur.com/COBTAWF.jpeg');  /* Default → https://i.imgur.com/xKIOFc8.png */
 	background-size: cover; 
 	background-repeat: no-repeat; 
 	display:flex;

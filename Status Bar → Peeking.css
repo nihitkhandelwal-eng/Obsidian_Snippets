@@ -2,7 +2,7 @@
 .is-translucent .status-bar {
   background-color: var(--background-secondary-alt);
   font-size: 13px;
-  position: absolute;
+  position: center;
   margin: auto;
   right: 24.5%;
   /*top: -24px;*/
@@ -15,17 +15,18 @@
   max-height: unset;
 }
 
+
 .is-translucent .status-bar{
   background-color: transparent;
 }
 
 .status-bar,
 .is-translucent .status-bar{
-  opacity: 0;
+  opacity: 0.3;
   transition: 200ms;
 }
 
 .status-bar:hover{
   opacity: 1;
   transition: 200ms;
-}
+} 

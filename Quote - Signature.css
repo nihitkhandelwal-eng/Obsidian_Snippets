@@ -1,8 +1,9 @@
 /* Put this code in the CSS sheet (courtesy Gabroel) */
 /* signature inside the blockquote*/
 .signature {
-  font-family: "SignPainter"; /**Choose a cursive font */
+  font-family: Ananda; /**Choose a cursive font */
   text-align: right;
+  font-size: larger;
 }
 
 /* Then, in the note, at the end of the blockquote put this:

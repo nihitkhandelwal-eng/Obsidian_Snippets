@@ -1,3 +1,8 @@
+.callout {
+  border: none;
+  border-radius: 8px;
+}
+
 /*Callout Positioning*/
 :not(.is-live-preview) .callout.callout:is([data-callout*="p+l"], [data-callout*=left]) {
   float: left;
@@ -68,11 +73,13 @@
   width: calc(var(--tbl-w) / 2);
 }
 
+ 
 /*--Callout Types--*/
-body {
+ body {
   --kbn-radius: 3px;
   --co-radius: 7px;
 }
+
 
 /* Minimalist Style */
 .alt-co .callout.callout {
@@ -80,7 +87,7 @@ body {
   border: 0;
   margin-left: 40px;
   margin-right: 40px;
-  border-radius: var(--radius, var(--co-radius));
+  border-radius: 10px; /* This was the default var(--radius, var(--co-radius)) */
   box-shadow: 1px 1px 0 rgba(var(--callout-color), 0.2);
 }
 .alt-co .callout.callout p:first-child {

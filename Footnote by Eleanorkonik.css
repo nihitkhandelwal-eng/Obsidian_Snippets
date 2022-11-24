@@ -4,11 +4,16 @@
 
 .markdown-preview-view .footnotes > hr:first-child {
   display: none;
-}
+} 
+  
+  .markdown-preview-view .footnotes::before {
+    content: "Footnotes";
+    font-family: "Caveat Brush"; 
+    font-size:2.2em;
+    color: rgb(97, 97, 89);
+  }
 
-.markdown-preview-view .footnotes::before {
-  content: "Endnotes";
-  font-family: "Caveat Brush"; 
-  font-size:1.8em;
-  color: rgb(114, 111, 111);
+  .cm-s-obsidian .HyperMD-footnote, .footnotes {
+    font-size: calc(var(--font-adaptive-normal) - 2px);
+    padding-top: 1cm;
 }

@@ -1,0 +1,47 @@
+.calendar .day .dot-container {
+    align-items: center;
+}
+
+.calendar .day .dot-container svg {
+    position: absolute;
+}
+
+.calendar .day .dot-container svg:first-child,
+.calendar .day .dot-container svg:nth-child(2),
+.calendar .day .dot-container svg:nth-child(3) {
+    opacity: 50%;
+}
+
+.calendar .day .dot-container svg:first-child {
+    height: 3px;
+    width: 3px;
+}
+
+.calendar .day .dot-container svg:nth-child(2) {
+    height: 4px;
+    width: 4px;
+}
+
+.calendar .day .dot-container svg:nth-child(3) {
+    height: 5px;
+    width: 5px;
+}
+
+.calendar .day .dot-container svg:nth-child(4) {
+    height: 6px;
+    width: 6px;
+}
+
+.calendar .day .dot-container svg:nth-child(5) {
+    height: 7px;
+    width: 7px;
+}
+
+.calendar .day .dot-container svg:nth-child(6) {
+    height: 8px;
+    width: 8px;
+}
+
+.calendar .day .dot-container .hollow {
+    fill: var(--color-dot);
+}

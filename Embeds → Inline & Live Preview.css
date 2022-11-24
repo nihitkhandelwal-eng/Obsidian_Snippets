@@ -1,5 +1,5 @@
 :root {
-    --block-ref-line-color: #a337ff; /* #7159de (similar to Obsidian purple) */
+    --block-ref-line-color: #212121; /* #7159de (similar to Obsidian purple) */
     --block-ref-line-type: solid;
     --block-ref-line-size: 2px;
     --block-ref-hover-bg-color: #d4d0d026; /* Set to "inherit" for no bg color */

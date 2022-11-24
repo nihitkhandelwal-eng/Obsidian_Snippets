@@ -1,0 +1,30 @@
+/* .markdown-preview-view .task-list-item-checkbox {
+    position: relative;
+    top: var(--checkbox-top);
+    left: var(--checkbox-left);
+    line-height: 0;
+    margin: var(--checkbox-margin);
+} */
+
+/* .task-list-item-checkbox, .markdown-preview-view .task-list-item-checkbox {
+    filter: none;
+    width: var(--checkbox-size);
+    height: var(--checkbox-size);
+} */
+
+/* .markdown-preview-view .task-list-item-checkbox {
+    position: relative;
+    top: 4px;
+    margin-left: 30%;
+    margin-right: 70%;
+} */
+
+/* .NLT__td-container {
+    padding: 4px 100px;
+} */
+
+.NLT__checkbox-cell {
+    width: 10%;
+    padding-right: 10%;
+    padding-left: 60%;
+}

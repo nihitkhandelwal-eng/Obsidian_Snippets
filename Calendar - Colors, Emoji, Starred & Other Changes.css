@@ -138,3 +138,28 @@
 #calendar-container [data-tags~="journal/musical"] {
   color: rgb(255, 78, 246); 
 }
+
+
+
+/* --------------- Emoji on calendar --------------- */
+#calendar-container [data-emoji-tag]::after {
+  content: attr(data-emoji-tag);
+  position: absolute;
+  top: -4px;
+  right: 4px;
+  height: 5px;
+  width: 10px;
+  size: 5px;
+}
+
+
+/* --------------- Weekends on calendar --------------- */
+#calendar-container {
+  --color-background-weekend: rgba(0, 0, 0, 0.1);
+}
+
+
+/* --------------- No tasks on calendar --------------- */
+/* #calendar-container .hollow {
+  display: none;
+}  */

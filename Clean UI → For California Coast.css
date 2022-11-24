@@ -1,0 +1,535 @@
+/* Typography & Colors */
+
+/* Text color */
+body {
+    color: #444444;
+    --text-normal: #444444;
+}
+
+.markdown-preview-view {
+    color: #444444;
+    line-height: 1.8;
+}
+
+html {
+    --editor-font-weight: 500 !important;
+}
+
+/* Color of divider */
+hr {
+    border-color: #d9d9d9;
+}
+
+/* Markdown link color & bracket's color */
+.cm-formatting.cm-formatting-link.cm-link,
+.cm-string.cm-url {
+    color: #444444 !important;
+    /* opacity: 80%; */
+    font-weight: normal !important ;
+}
+
+/* No Underline on links */
+span.cm-hmd-internal-link span.cm-underline {
+    text-decoration: none !important;
+}
+
+/* No Underline on links */
+.internal-link,
+.cm-url {
+    text-decoration: none !important;
+}
+
+span.cm-hmd-internal-link:hover {
+    text-decoration: none !important;
+}
+
+.markdown-source-view.mod-cm6 .cm-underline {
+    text-decoration: none;
+}
+
+/* No ugly external link image */
+span.external-link {
+    background: none;
+    padding-right: 0;
+}
+
+/* Nice external link indicator */
+span.external-link::after {
+    content: "↗︎";
+    color: #d54043;
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+/* Change quote text from italics to normal & Colors */
+.cm-quote {
+    font-style: normal !important;
+    color: #444444 !important;
+}
+
+/* Quote left border */
+.markdown-source-view.mod-cm6.is-live-preview .HyperMD-quote {
+    border: 0 solid #d54043;
+    border-left-width: 5px;
+}
+
+/* List Item Spacing */
+
+/* .cm-s-obsidian .HyperMD-list-line {
+    padding-bottom: 0.5em;
+} */
+
+/* Custom Bullet Style */
+span.list-bullet::after {
+    content: "•" !important;
+    font-size: 30px;
+    height: 0px !important;
+    /* color: #dd4c4f; */
+    padding-right: 10px;
+    font-weight: 600;
+}
+
+/* Change bullet and number color in Reading view */
+::marker {
+    color: #d54043;
+}
+
+/* Color for all markers/bullets and weight for numbers */
+.markdown-source-view.mod-cm6.cm-s-obsidian span.cm-formatting-list {
+    color: #d54043;
+    font-weight: 500;
+}
+
+/* Number Color in Reading View */
+
+/* Hashtag BG */
+.markdown-source-view.mod-cm6.cm-s-obsidian span.cm-hashtag {
+    background-color: hsl(210, 4%, 92%);
+}
+
+/* The # Symbol */
+.markdown-source-view.mod-cm6.cm-s-obsidian .cm-hashtag-begin {
+    color: #888888 !important;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    padding: 2px 0 3px 6px;
+}
+
+/* Hashtag Text */
+.markdown-source-view.mod-cm6.cm-s-obsidian .cm-hashtag-end {
+    color: #444 !important;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    padding: 2px 10px 3px 0;
+}
+
+/* Highlight */
+.cm-s-obsidian span.cm-highlight {
+    border-radius: 6px !important;
+    padding: 5px 10px;
+}
+
+.cm-s-obsidian span.cm-highlight::selection {
+    background-color: #d3f2cf;
+}
+
+/* Double equals formatting of highlights */
+span.cm-formatting.cm-formatting-highlight.cm-highlight.cm-list-3 {
+    padding: 5px 0 5px 5px;
+    border-radius: 0% !important;
+}
+
+/* == DARK MODE == */
+
+/* Change Accent Color in Dark Mode*/
+.theme-dark {
+    --accent-h: 205 !important;
+    --accent-s: 70% !important;
+    --accent-l: 90% !important;
+}
+
+/* Text Color */
+.theme-dark .markdown-preview-view {
+    color: #dfe0e0;
+}
+
+body.theme-dark {
+    color: #dfe0e0;
+    --text-normal: #dfe0e0;
+}
+
+/* Link color */
+.theme-dark .cm-hmd-internal-link {
+    color: #44a2e5 !important;
+}
+
+/* Divider color */
+.theme-dark hr {
+    border-color: #525354;
+}
+
+/* Bullet Color */
+.theme-dark span.list-bullet::after {
+    color: #44a2e5;
+}
+
+
+
+/* == UI Changes == */
+
+/* Little left ribbon padding */
+.workspace-ribbon,
+.hider-frameless .workspace-ribbon.mod-left.is-collapsed {
+    padding: 12px 18px 24px 18px;
+    background-color: hsl(210, 15%, 90%);
+}
+
+/* Margin between ribbon icons */
+.side-dock-ribbon-action {
+    margin-top: 24px;
+}
+
+/* Ribbon icons size */
+.side-dock-ribbon-action > svg {
+    width: 20px;
+    height: 20px;
+}
+
+/* Padding of main Sidebars */
+.hider-frameless .workspace-split.mod-left-split > div.workspace-tabs {
+    padding: 40px 0 0 16px;
+}
+
+/* Logo / Title on Sidebar */
+.workspace-split.mod-left-split > div.workspace-tabs::before {
+    content: "Brainforest";
+    font-family: Bear Sans UI Headline;
+    font-weight: 500;
+    /* color: hsl(359, 10%, 95%); */
+    font-size: 22px;
+    text-transform: uppercase;
+    margin: 0 0 15px 15px;
+    letter-spacing: 9px;
+}
+
+/* File Manager, Search & Star Tabs */
+.workspace-tab-header {
+    padding: 6px 22px;
+}
+
+/* Header Tabs Background color */
+.mod-left-split .workspace-tab-container-inner {
+    background-color: hsl(210, 15%, 90%);
+}
+
+/* 3 Buttons - New File, New Folder & Sort */
+.nav-action-button {
+    padding: 6px 18px;
+    margin: 0 11px 8px 0;
+    border-radius: 4px;
+    box-shadow: 0px 1px 8px rgb(0 0 0 / 6%);
+}
+
+/* Margin between buttons and folders */
+.nav-files-container {
+    margin-top: 15px;
+}
+
+/* Folder */
+.nav-file-title-content,
+.nav-folder-title-content {
+    padding: 8px 0 8px 0px;
+    font-size: 15px;
+}
+
+/* Folder Title */
+.nav-folder-title-content {
+    padding-left: 8px;
+    font-size: 16px;
+}
+
+/* Add background to folder title */
+.nav-folder-title {
+    padding: 4px 10px;
+    margin-bottom: 8px;
+    border-radius: 8px;
+    background-color: hsl(210, 15%, 90%);
+}
+
+/* Rename Field */
+.nav-file-title-content.is-being-renamed,
+.nav-folder-title-content.is-being-renamed {
+    padding: 8px 8px;
+    border-radius: 8px;
+    background-color: inherit;
+    box-shadow: none;
+}
+
+/* Rename Field Hover */
+.nav-file-title-content.is-being-renamed:hover,
+.nav-folder-title-content.is-being-renamed:hover {
+    background-color: inherit;
+    box-shadow: none;
+}
+
+.nav-file-title-content.is-being-renamed::selection,
+.nav-folder-title-content.is-being-renamed::selection {
+    background-color: hsl(210, 18%, 30%);
+    color: white;
+}
+
+.nav-folder.is-collapsed {
+    margin-bottom: 20px;
+}
+
+/* Decreased left padding on file names */
+.nav-file {
+    padding: 0 5px 0px 15px;
+}
+
+/* Hides an empty folder title */
+.nav-folder.mod-root > .nav-folder-title:nth-child(1) {
+    /* background-color: inherit; */
+    display: none;
+}
+
+/* Limits the background of folder name to the visual width */
+.nav-folder {
+    max-width: 96%;
+}
+
+.nav-folder-children {
+    padding-bottom: 15px;
+}
+
+/* == Center Area == */
+
+/* Collapse Button */
+body:not(.cc-no-custom-icons) .collapse-icon > svg,
+body:not(.cc-no-custom-icons) .style-settings-collapse-indicator > svg {
+    color: #888 !important;
+}
+
+/* Fold Placeholder */
+.ͼ1 .cm-foldPlaceholder {
+    padding: 0 8px;
+    font-size: 0px;
+}
+
+/* Custom placeholder */
+.markdown-source-view.mod-cm6 .cm-foldPlaceholder::after {
+    content: "•••";
+    color: #888888;
+    font-size: 16px;
+    background-color: hsl(210, 4%, 92%);
+    padding: 0 8px;
+    border-radius: 6px;
+}
+
+/* Hides border/dividing line below header */
+.view-header {
+    box-shadow: none;
+}
+
+/* Border shows up when hovered */
+.view-header:hover {
+    box-shadow: 0px 1px 3px rgb(0 0 0 / 8%);
+    transition: all 250ms;
+}
+
+/* Lightens the "drag to rearrange" icon */
+.view-header-icon {
+    color: hsl(0, 0%, 95%);
+}
+
+/* Becomes darker when hovered */
+.view-header-icon:hover {
+    color: hsl(0, 0%, 50%);
+}
+
+/* bolder title*/
+.view-header-title {
+    color: #444444;
+    font-weight: 600;
+}
+
+/* Adds ".md" to title so it looks like a filename */
+.view-header-title::after {
+    content: ".md";
+}
+
+/* Reduced padding of main content area */
+.markdown-source-view.mod-cm6 .cm-scroller {
+    padding: 1em 2em;
+}
+
+/* Remove gradient at top of navigation area */
+.theme-dark .nav-files-container {
+    background: none;
+}
+
+@media (max-width: 760px) {
+    .markdown-source-view.mod-cm6 .cm-scroller {
+        padding: 1em 0.5em;
+    }
+}
+
+
+
+/* == Semi-Dark Mode == */
+
+/* Little Left Ribbon BG Color*/
+.workspace-ribbon,
+.hider-frameless .workspace-ribbon.mod-left.is-collapsed {
+    background-color: hsl(210, 20%, 16%);
+}
+
+/* Ribbon icons color */
+.side-dock-ribbon-action,
+.mod-left-split .workspace-ribbon-collapse-btn {
+    color: hsl(180, 2%, 88%);
+}
+
+/* Main Sidebar BG Color */
+.mod-left-split {
+    background-color: hsl(210, 20%, 13%);
+}
+
+/* Logo Color on Sidebar */
+.workspace-split.mod-left-split > div.workspace-tabs::before {
+    color: hsl(359, 10%, 95%);
+}
+
+/* Inactive header tab's icon color */
+.mod-left-split .workspace-tab-header {
+    color: hsl(180, 2%, 75%);
+}
+
+/* Header tabs BG Color */
+.mod-left-split .workspace-tab-container-inner {
+    background-color: hsl(210, 15%, 20%);
+}
+
+.view-header-icon:hover,
+.workspace-tab-header:hover,
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover,
+.workspace-ribbon-collapse-btn:hover {
+    color: hsl(180, 2%, 65%);
+}
+
+/* Active Header Tab Color */
+.mod-left-split .workspace-tab-header.is-active,
+.mod-left-split .workspace-tab-header.is-active:hover {
+    color: hsl(240, 1%, 78%);
+    background-color: hsl(210, 12%, 32%);
+}
+
+/* Padding between tabs and buttons */
+.mod-left-split .workspace-tab-header-container {
+    padding: 5px 10px 18px;
+}
+
+/* Buttons */
+.mod-left-split .nav-action-button {
+    color: hsl(180, 2%, 88%);
+    background-color: hsl(210, 12%, 28%);
+    box-shadow: none;
+}
+
+/* Removes the white gradient thing on top of the navigation list */
+.nav-files-container,
+.item-list,
+.mod-left-split .search-result-container {
+    background: none;
+}
+
+/* Light text */
+.nav-folder,
+.nav-file,
+.mod-left-split .search-results-children {
+    --text-normal: hsl(180, 2%, 88%);
+}
+
+/* Folder Title BG Color */
+.nav-folder-title {
+    background-color: hsl(210, 18%, 17%);
+}
+
+/* Folder Title BG on Hover */
+body:not(.is-grabbing) .nav-file-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-file-title:hover,
+body:not(.is-grabbing) .nav-folder-title:hover .nav-folder-collapse-indicator,
+body:not(.is-grabbing) .nav-folder-title:hover {
+    background-color: hsl(210, 12%, 24%);
+}
+
+/* Rename Field Selection */
+.nav-file-title-content.is-being-renamed::selection,
+.nav-folder-title-content.is-being-renamed::selection {
+    background-color: hsla(210, 12%, 100%, 75%);
+    color: hsl(210, 12%, 10%);
+}
+
+/* Search result items BG color */
+.search-result-file-match:not(.search-info-more-matches) {
+    background-color: hsl(210, 18%, 17%);
+}
+
+/* Collapse Icon Color */
+body:not(.cc-no-custom-icons) .collapse-icon > svg,
+body:not(.cc-no-custom-icons) .style-settings-collapse-indicator > svg {
+    color: hsl(180, 2%, 88%);
+}
+
+/* Dark icons for files */
+body:not(.cc-no-file-icons) .nav-file-title-content::before {
+    background-image: url(data:image/svg+xml;charset=utf-8;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSI2NCIgaGVpZ2h0PSI2NCIgZmlsbD0ibm9uZSIgdmlld0JveD0iMCAwIDY0IDY0Ij48cGF0aCBmaWxsPSIjNTg1ODU4IiBkPSJNOS43NzMgNC45NDhjMC0xLjA2Ny44NjUtMS45MzIgMS45MzItMS45MzJoMjQuMTZjMi4xMDcgMCAzLjQwNSAxLjM2OCAzLjc2NCAxLjgwMi4wNy4wODUuMTQyLjE3LjIyLjI0OGwxMi40NCAxMi40NC4wMS4wMWMuMTAzLjEwMyAxLjkyOCAxLjk1NiAxLjkyOCAzLjg2MXYzNy42OUExLjkzMyAxLjkzMyAwIDAxNTIuMjk1IDYxaC00MC41OWExLjkzMyAxLjkzMyAwIDAxLTEuOTMyLTEuOTMzVjQuOTQ4eiIvPjxwYXRoIHN0cm9rZT0iIzAwMCIgc3Ryb2tlLW9wYWNpdHk9Ii4yIiBzdHJva2Utd2lkdGg9IjMiIGQ9Ik0xMS43MDYgMS41MTZ2MS41LTEuNWEzLjQzMyAzLjQzMyAwIDAwLTMuNDMzIDMuNDMydjU0LjEyYTMuNDMzIDMuNDMzIDAgMDAzLjQzMiAzLjQzMmg0MC41OWEzLjQzMyAzLjQzMyAwIDAwMy40MzItMy40MzNoLTEuNSAxLjVWMjEuMzc3YzAtMS4zOTEtLjY0Ny0yLjYzMS0xLjE3Mi0zLjQzYTEwLjAyIDEwLjAyIDAgMDAtMS4xOTUtMS40OTFzMCAwIDAgMGwtLjAwNy0uMDA3LS4wMDMtLjAwMy0xMi40NC0xMi40NHMwIDAgMCAwYTIuMjI1IDIuMjI1IDAgMDEtLjEyNS0uMTQ0bC0xLjE1Ni45NTYgMS4xNTYtLjk1NmMtLjQ1NC0uNTUtMi4xMzYtMi4zNDYtNC45Mi0yLjM0NkgxMS43MDdoMHoiLz48cGF0aCBmaWxsPSIjN0I3QjdCIiBkPSJNMzcuNzc3IDMuNDJ2MTQuMDg1YzAgMS4wNzEuODYyIDEuOTMzIDEuOTMzIDEuOTMzaDEzLjk3OWE3LjM2NyA3LjM2NyAwIDAwLTEuMzk3LTEuOTMzTDM5LjcyOSA0Ljk0MmMtLjYwOS0uNzctMS4yODYtMS4yMzYtMS45MzMtMS41MjFsLS4wMi0uMDAxeiIvPjxwYXRoIGZpbGw9IiM3QjdCN0IiIGQ9Ik0zOS43MSAyMi4zMzdhNC44MjggNC44MjggMCAwMS00LjgzMy00LjgzMlYzbC45ODkuMDE1YzEuMDYxIDAgMS45MS40MDUgMS45MS40MDV2MTQuMDg1YzAgMS4wNzEuODYzIDEuOTMzIDEuOTM0IDEuOTMzaDEzLjk3OXMuNTM4Ljk3My41MzggMS45Mzl2Ljk2SDM5LjcxeiIvPjxnPjxwYXRoIGZpbGw9IiNFMEUwRTAiIGQ9Ik0zMy4yNzQgMzQuODQ0bC00LjgwNy0xMy4wNkgyNi4xMWwtNC43ODQgMTIuOTkzYy0uNjUyIDEuNzk3LS45MzIgMi4wNjYtMi40MDQgMi4yMzVWMzhoNS40MDJ2LS45ODhjLTEuNzk3LS4yMjUtMi4wMS0uNTI4LTEuNDQ4LTIuMTlsLjc5Ny0yLjI5MWg1LjY5NGwuODA4IDIuMjljLjU3MyAxLjY1Mi4zMzcgMS45NjYtMS40NDggMi4xOVYzOGg2LjkxOHYtLjk4OGMtMS40MDQtLjE2OS0xLjczLS40MzgtMi4zNy0yLjE2OHptLTkuMTg3LTMuNTI2bDIuNDE1LTcuMDA4IDIuNDQ4IDcuMDA4aC00Ljg2M3pNMTcgNDRoMzB2M0gxN3pNMTcgNTFoMzB2M0gxN3oiLz48L2c+PC9zdmc+);
+}
+
+
+
+/* Applies to all of front-matter */
+.is-live-preview .cm-line .cm-hmd-frontmatter {
+    font-family: Bear Sans UI;
+    text-transform: capitalize;
+}
+
+/* Applies to front-matter variable when inactive (cursor not on the line) */
+.is-live-preview .cm-line:not(.cm-active) > .cm-hmd-frontmatter.cm-atom {
+    color: hsl(0, 0%, 20%);
+}
+
+/* Applies to front-matter variable when active (cursor on the line) */
+.is-live-preview .cm-line .cm-hmd-frontmatter.cm-atom {
+    font-weight: 700;
+    color: hsl(0, 0%, 20%);
+}
+
+/* Colon after variable when inactive (because we hide all meta symbols including colon and commas when inactive) */
+.is-live-preview .cm-line:not(.cm-active) .cm-hmd-frontmatter.cm-atom::after {
+    content: ":";
+}
+
+/* Applies to Values */
+.is-live-preview .cm-line:not(.cm-active) > .cm-hmd-frontmatter:not(.cm-meta):not(.cm-atom) {
+    color: hsl(0, 0%, 30%);
+    border-bottom: 2px solid hsl(0, 0%, 85%);
+}
+
+/* Period after values, to separate values (specially when the value is more than one word) */
+.is-live-preview .cm-line:not(.cm-active) > .cm-hmd-frontmatter:not(.cm-meta):not(.cm-atom)::after {
+    content: ".";
+}
+
+/* Hides triple dashes and meta symbols like brackets, colons, commas when inactive */
+.is-live-preview .cm-line:not(.cm-active) .cm-hmd-frontmatter.cm-def,
+.is-live-preview .cm-line:not(.cm-active) .cm-hmd-frontmatter.cm-meta {
+    visibility: hidden;
+}
+
+/* Shows triple dashes and metadata when active */
+.is-live-preview .cm-line .cm-hmd-frontmatter.cm-def .cm-selection {
+    visibility: visible;
+}
+
